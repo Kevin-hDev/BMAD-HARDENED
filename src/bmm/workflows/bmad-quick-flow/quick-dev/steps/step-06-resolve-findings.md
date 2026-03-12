@@ -5,6 +5,11 @@ description: 'Handle review findings interactively, apply fixes, update tech-spe
 
 # Step 6: Resolve Findings
 
+> **MANDATORY PRE-STEP RULES:**
+> - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+> - 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
+
+
 **Goal:** Handle adversarial review findings interactively, apply fixes, finalize tech-spec.
 
 ---

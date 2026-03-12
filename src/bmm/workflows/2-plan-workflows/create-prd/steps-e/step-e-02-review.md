@@ -41,6 +41,7 @@ Thoroughly review the existing PRD, analyze validation report findings (if provi
 - 💬 Approach: Thorough analysis with user confirmation on plan
 - 🚪 This is a middle step - user confirms plan before proceeding
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

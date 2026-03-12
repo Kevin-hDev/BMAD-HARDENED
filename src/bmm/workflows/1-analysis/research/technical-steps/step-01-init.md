@@ -12,6 +12,7 @@
 - 🔍 This is SCOPE CONFIRMATION ONLY - no web research yet
 - ✅ YOU MUST ALWAYS SPEAK OUTPUT In your Agent communication style with the config `{communication_language}`
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

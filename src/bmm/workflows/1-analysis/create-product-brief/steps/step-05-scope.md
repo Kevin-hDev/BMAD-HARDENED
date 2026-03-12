@@ -42,6 +42,7 @@ Define MVP scope with clear boundaries and outline future vision through collabo
 - 💬 Approach: Systematic scope negotiation with clear boundary setting
 - 📋 COLLABORATIVE scope definition that prevents scope creep
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

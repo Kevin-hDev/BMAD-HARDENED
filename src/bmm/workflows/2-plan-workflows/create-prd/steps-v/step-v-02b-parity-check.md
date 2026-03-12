@@ -39,6 +39,7 @@ Analyze non-standard PRD and identify gaps to achieve BMAD PRD parity, presentin
 - 💬 Approach: Systematic gap analysis with clear recommendations
 - 🚪 This is an optional branch step - user chooses next action
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

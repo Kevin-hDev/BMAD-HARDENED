@@ -1,5 +1,11 @@
 # Changelog
 
+## [6.1.4] — Global rules reference in all step files + quick-flow fix
+
+* All 111 step files now reference `global-agent-rules.md` directly — survives context compaction
+* Fixed 15 quick-flow step files missed in 6.1.3 (now have both web search + global rules)
+* 4-layer enforcement complete: agent → workflow → step (web search) → step (global rules)
+
 ## [6.1.3] — Web search enforcement in all step files
 
 * 96 step files now include web search in MANDATORY EXECUTION RULES

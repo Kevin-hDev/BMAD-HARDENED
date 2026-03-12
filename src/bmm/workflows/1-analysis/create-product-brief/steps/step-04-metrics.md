@@ -42,6 +42,7 @@ Define comprehensive success metrics that include user success, business objecti
 - 💬 Approach: Systematic metric definition that connects user value to business success
 - 📋 COLLABORATIVE metric definition that drives actionable decisions
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

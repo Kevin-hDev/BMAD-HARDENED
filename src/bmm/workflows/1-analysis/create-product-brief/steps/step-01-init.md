@@ -41,6 +41,7 @@ Initialize the product brief workflow by detecting continuation state and settin
 - 💬 Approach: Systematic setup with clear reporting to user
 - 📋 Detect existing workflow state and handle continuation properly
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

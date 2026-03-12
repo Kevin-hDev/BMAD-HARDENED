@@ -47,6 +47,7 @@ Discover and classify the project - understand what type of product this is, wha
 - 💬 APPROACH: Natural conversation to understand the project
 - 🎯 LOAD classification data BEFORE starting discovery conversation
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

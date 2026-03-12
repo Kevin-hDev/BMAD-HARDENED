@@ -39,6 +39,7 @@ Ensure Functional Requirements and Non-Functional Requirements don't include imp
 - 💬 Approach: Systematic scanning for technology and implementation terms
 - 🚪 This is a validation sequence step - auto-proceeds when complete
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

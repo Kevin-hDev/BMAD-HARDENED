@@ -51,6 +51,7 @@ To design and get approval for the epics_list that will organize all requirement
 - 🚪 GET explicit approval for the epics_list
 - 🔗 **CRITICAL: Each epic must be standalone and enable future epics without requiring future epics to function**
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

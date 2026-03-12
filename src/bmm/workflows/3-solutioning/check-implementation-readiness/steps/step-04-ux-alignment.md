@@ -36,6 +36,7 @@ To check if UX documentation exists and validate that it aligns with PRD require
 - 💬 Validate alignment between UX, PRD, and Architecture
 - 🚪 Add findings to the output report
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

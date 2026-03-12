@@ -97,9 +97,13 @@ Directory: `src/bmm/data/security/`
 | `check-implementation-readiness/workflow.md` | + security_data path, + BLOCKING security gate |
 | **All 19 BMM workflows** | + `PRE-EXECUTION (MANDATORY)` block — loads global-agent-rules.md + requires web search before any step *(added in 6.1.2)* |
 
-## Modified existing step files (96)
+## Modified existing step files (111)
 
-All 96 step files across all workflows now include a web search instruction in their `MANDATORY EXECUTION RULES` section. This ensures agents search the web at every step, even after context compaction or in new conversations. *(added in 6.1.3)*
+All 111 step files across all workflows now include:
+- A web search instruction *(added in 6.1.3, completed in 6.1.4 for 15 quick-flow files)*
+- A direct reference to `global-agent-rules.md` *(added in 6.1.4)* — ensures all cross-workflow rules (checkup tracking, story sizing, security data loading) survive context compaction
+
+This includes 3 sub-workflows in `bmad-quick-flow/` (15 files) that use a different step format and were fixed in 6.1.4.
 
 ## Modified/added global files (2)
 

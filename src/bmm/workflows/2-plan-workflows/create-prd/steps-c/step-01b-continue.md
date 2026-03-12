@@ -34,6 +34,7 @@ Resume the PRD workflow from where it was left off, ensuring smooth continuation
 - 🚫 FORBIDDEN to modify content completed in previous steps
 - 📖 Only reload documents that were already tracked in `inputDocuments`
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

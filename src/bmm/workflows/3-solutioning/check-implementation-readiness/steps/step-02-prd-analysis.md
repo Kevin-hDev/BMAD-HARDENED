@@ -37,6 +37,7 @@ To fully read and analyze the PRD document (whole or sharded) to extract all Fun
 - 💬 Read PRD completely - whole or all sharded files
 - 🚪 Extract every FR and NFR with numbering
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 

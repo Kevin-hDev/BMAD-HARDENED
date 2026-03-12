@@ -42,6 +42,7 @@ Define target users with rich personas and map their key interactions with the p
 - 💬 Approach: Systematic persona development with journey mapping
 - 📋 COLLABORATIVE persona development, not assumption-based user creation
 - 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
+- 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 ## EXECUTION PROTOCOLS:
 
