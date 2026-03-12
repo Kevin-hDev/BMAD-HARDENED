@@ -1,5 +1,21 @@
 # Changelog
 
+## [6.1.3] — Web search enforcement in all step files
+
+* 96 step files now include web search in MANDATORY EXECUTION RULES
+* Completes the 3-layer enforcement: agent → workflow → step
+
+## [6.1.2] — PRE-EXECUTION block in all workflows
+
+* 19 BMM workflow.md files now include mandatory PRE-EXECUTION section
+* Loads global-agent-rules.md + requires web search before any step
+
+## [6.1.1] — Global rules for all agents
+
+* Added global rules loading to 5 agents missing it (Nyx, Bastion, Zero, Tech Writer, UX Designer)
+* Added web search principles to Tech Writer and UX Designer
+* All 13/13 agents now load global-agent-rules.md
+
 ## [6.1.0] — BMAD-HARDENED Fork
 
 > Fork of [BMad Method v6.0.4](https://github.com/bmad-code-org/BMAD-METHOD) — See [FORK-CHANGES.md](FORK-CHANGES.md) for full details.

@@ -68,7 +68,7 @@ Directory: `src/bmm/data/security/`
 |------|---------|
 | `index.md` | Tag-based index for selective loading (INDEX_THEN_SELECTIVE) |
 
-## Modified existing agents (7)
+## Modified existing agents (10)
 
 | Agent | Changes |
 |-------|---------|
@@ -78,9 +78,13 @@ Directory: `src/bmm/data/security/`
 | Architect | + web search, + global rules |
 | Developer (dev) | + web search, + global rules |
 | Analyst | + web search, + global rules |
-| Tech Writer | + web search, + global rules |
+| Tech Writer | + web search principle, + global rules *(added in 6.1.1)* |
+| UX Designer | + web search principle, + global rules *(added in 6.1.1)* |
+| Cybersecurity Expert (Nyx) | + global rules *(added in 6.1.1)* |
+| Security Architect (Bastion) | + global rules *(added in 6.1.1)* |
+| Tech Genius (Zero) | + global rules *(added in 6.1.1)* |
 
-## Modified existing workflows (6)
+## Modified existing workflows (19)
 
 | Workflow | Changes |
 |----------|---------|
@@ -91,6 +95,11 @@ Directory: `src/bmm/data/security/`
 | `create-epics-and-stories/workflow.md` | + security_data path, + section for security ACs |
 | `dev-story/workflow.md` | + conditional security data loading (when story has security ACs) |
 | `check-implementation-readiness/workflow.md` | + security_data path, + BLOCKING security gate |
+| **All 19 BMM workflows** | + `PRE-EXECUTION (MANDATORY)` block — loads global-agent-rules.md + requires web search before any step *(added in 6.1.2)* |
+
+## Modified existing step files (96)
+
+All 96 step files across all workflows now include a web search instruction in their `MANDATORY EXECUTION RULES` section. This ensures agents search the web at every step, even after context compaction or in new conversations. *(added in 6.1.3)*
 
 ## Modified/added global files (2)
 
@@ -98,6 +107,18 @@ Directory: `src/bmm/data/security/`
 |------|---------|
 | `src/bmm/data/global-agent-rules.md` | + Web Search Systematic, + Checkup Feature Tracking, + Story Size Enforcement, + Code Review Scope, + Security DATA Loading (INDEX_THEN_SELECTIVE) |
 | `src/bmm/templates/checkup-feature.md` | New feature tracking template across phases |
+
+---
+
+## Web search enforcement (3-layer)
+
+BMAD-HARDENED enforces web search at **three levels** to survive context compaction:
+
+1. **Agent YAML** (principles) — loaded at conversation start
+2. **Workflow PRE-EXECUTION** — loaded when workflow launches
+3. **Step MANDATORY EXECUTION RULES** — loaded at each step, survives compaction
+
+This redundancy is intentional. LLMs lose early instructions during long workflows.
 
 ---
 
