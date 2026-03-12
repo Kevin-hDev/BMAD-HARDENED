@@ -64,3 +64,10 @@ When creating stories that touch auth, crypto, network, input handling, LLM, or 
 ### 2. First Step EXECUTION
 
 Read fully and follow: `{project-root}/_bmad/bmm/workflows/3-solutioning/create-epics-and-stories/steps/step-01-validate-prerequisites.md` to begin the workflow.
+
+## PRE-EXECUTION (MANDATORY)
+
+Before executing ANY step below, you MUST:
+
+1. **Read and follow** `{project-root}/_bmad/bmm/data/global-agent-rules.md`
+2. **Search the web** for up-to-date information relevant to this workflow's topic — your knowledge has a cutoff date

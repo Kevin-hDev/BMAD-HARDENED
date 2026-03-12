@@ -60,3 +60,10 @@ Before declaring implementation-ready, verify:
 ### 2. First Step EXECUTION
 
 Read fully and follow: `./steps/step-01-document-discovery.md` to begin the workflow.
+
+## PRE-EXECUTION (MANDATORY)
+
+Before executing ANY step below, you MUST:
+
+1. **Read and follow** `{project-root}/_bmad/bmm/data/global-agent-rules.md`
+2. **Search the web** for up-to-date information relevant to this workflow's topic — your knowledge has a cutoff date

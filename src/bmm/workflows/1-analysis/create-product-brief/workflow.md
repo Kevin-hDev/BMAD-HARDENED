@@ -55,3 +55,10 @@ Load and read full config from {project-root}/_bmad/bmm/config.yaml and resolve:
 ### 2. First Step EXECUTION
 
 Read fully and follow: `{project-root}/_bmad/bmm/workflows/1-analysis/create-product-brief/steps/step-01-init.md` to begin the workflow.
+
+## PRE-EXECUTION (MANDATORY)
+
+Before executing ANY step below, you MUST:
+
+1. **Read and follow** `{project-root}/_bmad/bmm/data/global-agent-rules.md`
+2. **Search the web** for up-to-date information relevant to this workflow's topic — your knowledge has a cutoff date

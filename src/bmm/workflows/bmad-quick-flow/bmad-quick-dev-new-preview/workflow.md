@@ -82,3 +82,10 @@ YOU MUST ALWAYS SPEAK OUTPUT in your Agent communication style with the config `
 ### 3. First Step Execution
 
 Read fully and follow: `./steps/step-01-clarify-and-route.md` to begin the workflow.
+
+## PRE-EXECUTION (MANDATORY)
+
+Before executing ANY step below, you MUST:
+
+1. **Read and follow** `{project-root}/_bmad/bmm/data/global-agent-rules.md`
+2. **Search the web** for up-to-date information relevant to this workflow's topic — your knowledge has a cutoff date

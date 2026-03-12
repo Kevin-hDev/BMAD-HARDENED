@@ -42,6 +42,13 @@ Load config from `{project-root}/_bmad/bmm/config.yaml` and resolve:
 
 ---
 
+## PRE-EXECUTION (MANDATORY)
+
+Before executing ANY step below, you MUST:
+
+1. **Read and follow** `{project-root}/_bmad/bmm/data/global-agent-rules.md`
+2. **Search the web** for up-to-date information relevant to this workflow's topic — your knowledge has a cutoff date
+
 ## EXECUTION
 
 Load and execute `{project-root}/_bmad/bmm/workflows/generate-project-context/steps/step-01-discover.md` to begin the workflow.
