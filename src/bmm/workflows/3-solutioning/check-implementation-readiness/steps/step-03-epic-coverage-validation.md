@@ -35,6 +35,7 @@ To validate that all Functional Requirements from the PRD are captured in the ep
 - 🚫 Don't analyze story quality (that's later)
 - 💬 Compare PRD FRs against epic coverage list
 - 🚪 Document every missing FR
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

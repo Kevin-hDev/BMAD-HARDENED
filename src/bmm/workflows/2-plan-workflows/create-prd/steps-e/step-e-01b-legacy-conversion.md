@@ -38,6 +38,7 @@ Analyze legacy PRD against BMAD standards, identify gaps, propose conversion str
 - 🚫 FORBIDDEN to perform conversion yet (that comes in edit step)
 - 💬 Approach: Analytical gap analysis with clear recommendations
 - 🚪 This is a branch step - user chooses conversion path
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

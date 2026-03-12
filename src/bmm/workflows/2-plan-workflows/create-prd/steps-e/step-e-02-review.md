@@ -40,6 +40,7 @@ Thoroughly review the existing PRD, analyze validation report findings (if provi
 - 🚫 FORBIDDEN to make changes to PRD in this step
 - 💬 Approach: Thorough analysis with user confirmation on plan
 - 🚪 This is a middle step - user confirms plan before proceeding
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

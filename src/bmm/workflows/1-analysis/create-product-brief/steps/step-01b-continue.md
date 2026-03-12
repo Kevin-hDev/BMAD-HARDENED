@@ -36,6 +36,7 @@ Resume the product brief workflow from where it was left off, ensuring smooth co
 - 🚫 FORBIDDEN to modify content completed in previous steps
 - 💬 Approach: Systematic state analysis with clear progress reporting
 - 📋 Resume workflow from exact point where it was interrupted
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

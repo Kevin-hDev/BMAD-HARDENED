@@ -50,6 +50,7 @@ To validate that all required input documents exist and extract all requirements
 - 🚫 FORBIDDEN to start creating epics or stories in this step
 - 💬 Extract requirements from ALL available documents
 - 🚪 POPULATE the template sections exactly as needed
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

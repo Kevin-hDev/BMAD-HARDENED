@@ -39,6 +39,7 @@ Final comprehensive completeness check - validate no template variables remain, 
 - 🚫 FORBIDDEN to validate quality (done in step 11) or other aspects
 - 💬 Approach: Systematic checklist-style verification
 - 🚪 This is a validation sequence step - auto-proceeds when complete
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

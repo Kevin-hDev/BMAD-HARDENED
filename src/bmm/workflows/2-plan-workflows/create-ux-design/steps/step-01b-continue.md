@@ -11,6 +11,7 @@
 - 💬 FOCUS on understanding where we left off and continuing appropriately
 - 🚪 RESUME workflow from exact point where it was interrupted
 - ✅ YOU MUST ALWAYS SPEAK OUTPUT In your Agent communication style with the config `{communication_language}`
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

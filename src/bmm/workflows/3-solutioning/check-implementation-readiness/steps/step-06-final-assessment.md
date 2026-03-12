@@ -34,6 +34,7 @@ To provide a comprehensive summary of all findings and give the report a final p
 - 🚫 Don't soften the message - be direct
 - 💬 Provide specific examples for problems
 - 🚪 Add final section to the report
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

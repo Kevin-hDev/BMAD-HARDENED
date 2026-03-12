@@ -41,6 +41,7 @@ Define MVP scope with clear boundaries and outline future vision through collabo
 - 🚫 FORBIDDEN to create MVP scope that's too large or includes non-essential features
 - 💬 Approach: Systematic scope negotiation with clear boundary setting
 - 📋 COLLABORATIVE scope definition that prevents scope creep
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

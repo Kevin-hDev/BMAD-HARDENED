@@ -41,6 +41,7 @@ Define target users with rich personas and map their key interactions with the p
 - 🚫 FORBIDDEN to create generic user profiles without specific details
 - 💬 Approach: Systematic persona development with journey mapping
 - 📋 COLLABORATIVE persona development, not assumption-based user creation
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

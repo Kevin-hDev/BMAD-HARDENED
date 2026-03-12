@@ -38,6 +38,7 @@ Analyze non-standard PRD and identify gaps to achieve BMAD PRD parity, presentin
 - 🚫 FORBIDDEN to perform other validation checks in this step
 - 💬 Approach: Systematic gap analysis with clear recommendations
 - 🚪 This is an optional branch step - user chooses next action
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

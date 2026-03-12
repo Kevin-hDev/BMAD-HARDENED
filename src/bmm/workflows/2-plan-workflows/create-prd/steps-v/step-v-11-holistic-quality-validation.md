@@ -40,6 +40,7 @@ Assess the PRD as a cohesive, compelling document - evaluating document flow, du
 - 🚫 FORBIDDEN to validate individual components (done in previous steps)
 - 💬 Approach: Multi-perspective evaluation using Advanced Elicitation
 - 🚪 This is a validation sequence step - auto-proceeds when complete
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

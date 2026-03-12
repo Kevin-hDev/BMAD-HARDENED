@@ -39,6 +39,7 @@ Detect if PRD follows BMAD format and route appropriately - classify as BMAD Sta
 - 🚫 FORBIDDEN to perform other validation checks in this step
 - 💬 Approach: Analytical and systematic, clear reporting of findings
 - 🚪 This is a branch step - may route to parity check for non-standard PRDs
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

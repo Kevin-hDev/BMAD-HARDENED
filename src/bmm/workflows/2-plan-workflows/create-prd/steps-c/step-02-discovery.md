@@ -46,6 +46,7 @@ Discover and classify the project - understand what type of product this is, wha
 - 🚫 FORBIDDEN to generate executive summary or vision statements (that's next steps)
 - 💬 APPROACH: Natural conversation to understand the project
 - 🎯 LOAD classification data BEFORE starting discovery conversation
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

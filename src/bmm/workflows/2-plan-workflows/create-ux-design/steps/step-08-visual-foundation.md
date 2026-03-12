@@ -11,6 +11,7 @@
 - 💬 FOCUS on establishing visual design foundation (colors, typography, spacing)
 - 🎯 COLLABORATIVE discovery, not assumption-based design
 - ✅ YOU MUST ALWAYS SPEAK OUTPUT In your Agent communication style with the config `{communication_language}`
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

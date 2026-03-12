@@ -37,6 +37,7 @@ Finalize validation report, summarize all findings from steps 1-12, present summ
 - 🚫 FORBIDDEN to perform additional validation
 - 💬 Approach: Conversational summary with clear next steps
 - 🚪 This is the final step - no next step after this
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

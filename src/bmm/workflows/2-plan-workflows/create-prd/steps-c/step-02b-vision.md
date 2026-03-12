@@ -43,6 +43,7 @@ Discover what makes this product special and understand the product vision throu
 - 🚫 FORBIDDEN to append anything to the document in this step
 - 💬 APPROACH: Natural conversation to understand what makes this product special
 - 🎯 BUILD ON classification insights from step 2
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

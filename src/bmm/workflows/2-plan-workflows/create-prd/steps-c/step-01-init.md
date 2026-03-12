@@ -42,6 +42,7 @@ Initialize the PRD workflow by detecting continuation state, discovering input d
 - 🚫 FORBIDDEN to look ahead to future steps or assume knowledge from them
 - 💬 Approach: Systematic setup with clear reporting to user
 - 🚪 Detect existing workflow state and handle continuation properly
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

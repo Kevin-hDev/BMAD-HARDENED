@@ -36,6 +36,7 @@ To fully read and analyze the PRD document (whole or sharded) to extract all Fun
 - 🚫 Don't validate files (done in step 1)
 - 💬 Read PRD completely - whole or all sharded files
 - 🚪 Extract every FR and NFR with numbering
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

@@ -36,6 +36,7 @@ To discover, inventory, and organize all project documents, identifying duplicat
 - 🚫 Don't read or analyze file contents
 - 💬 Identify duplicate documents clearly
 - 🚪 Get user confirmation on file selections
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

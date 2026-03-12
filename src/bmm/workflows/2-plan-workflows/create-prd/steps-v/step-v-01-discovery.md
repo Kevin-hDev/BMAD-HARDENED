@@ -39,6 +39,7 @@ Handle fresh context validation by confirming PRD path, discovering and loading 
 - 🚫 FORBIDDEN to perform any validation checks in this step
 - 💬 Approach: Systematic discovery with clear reporting to user
 - 🚪 This is the setup step - get everything ready for validation
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

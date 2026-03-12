@@ -50,6 +50,7 @@ To generate all epics with their stories based on the approved epics_list, follo
 - 💬 Each story must have clear acceptance criteria
 - 🚪 ENSURE each story is completable by a single dev agent
 - 🔗 **CRITICAL: Stories MUST NOT depend on future stories within the same epic**
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

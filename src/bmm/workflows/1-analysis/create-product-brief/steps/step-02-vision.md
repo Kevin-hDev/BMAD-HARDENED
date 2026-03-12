@@ -41,6 +41,7 @@ Conduct comprehensive product vision discovery to define the core problem, solut
 - 🚫 FORBIDDEN to generate vision without real user input and collaboration
 - 💬 Approach: Systematic discovery from problem to solution
 - 📋 COLLABORATIVE discovery, not assumption-based vision crafting
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

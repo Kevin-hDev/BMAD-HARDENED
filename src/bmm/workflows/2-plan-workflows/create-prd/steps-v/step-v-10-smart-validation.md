@@ -39,6 +39,7 @@ Validate Functional Requirements meet SMART quality criteria (Specific, Measurab
 - 🚫 FORBIDDEN to validate other aspects in this step
 - 💬 Approach: Score each FR on SMART criteria (1-5 scale)
 - 🚪 This is a validation sequence step - auto-proceeds when complete
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

@@ -39,6 +39,7 @@ Understand what the user wants to edit in the PRD, detect PRD format/type, check
 - 🚫 FORBIDDEN to make any edits yet
 - 💬 Approach: Inquisitive and analytical, understanding before acting
 - 🚪 This is a branch step - may route to legacy conversion
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

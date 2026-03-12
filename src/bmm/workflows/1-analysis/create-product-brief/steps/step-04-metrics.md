@@ -41,6 +41,7 @@ Define comprehensive success metrics that include user success, business objecti
 - 🚫 FORBIDDEN to create vague metrics that can't be measured or tracked
 - 💬 Approach: Systematic metric definition that connects user value to business success
 - 📋 COLLABORATIVE metric definition that drives actionable decisions
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

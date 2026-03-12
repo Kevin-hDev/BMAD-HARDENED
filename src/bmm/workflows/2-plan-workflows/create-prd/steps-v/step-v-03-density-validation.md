@@ -38,6 +38,7 @@ Validate PRD meets BMAD information density standards by scanning for conversati
 - 🚫 FORBIDDEN to validate other aspects in this step
 - 💬 Approach: Systematic scanning and categorization
 - 🚪 This is a validation sequence step - auto-proceeds when complete
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

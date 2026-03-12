@@ -38,6 +38,7 @@ Ensure Functional Requirements and Non-Functional Requirements don't include imp
 - 🚫 FORBIDDEN to validate other aspects in this step
 - 💬 Approach: Systematic scanning for technology and implementation terms
 - 🚪 This is a validation sequence step - auto-proceeds when complete
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

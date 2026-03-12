@@ -36,6 +36,7 @@ Complete the product brief workflow, update status files, and provide guidance o
 - 🚫 FORBIDDEN to generate new content for the product brief
 - 💬 Approach: Systematic completion with quality validation and next step recommendations
 - 📋 FINALIZE document and update workflow status appropriately
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

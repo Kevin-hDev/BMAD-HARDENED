@@ -38,6 +38,7 @@ Validate that all Functional Requirements (FRs) and Non-Functional Requirements 
 - 🚫 FORBIDDEN to validate other aspects in this step
 - 💬 Approach: Systematic requirement-by-requirement analysis
 - 🚪 This is a validation sequence step - auto-proceeds when complete
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

@@ -39,6 +39,7 @@ Validate that PRD covers all content from Product Brief (if brief was used as in
 - 🚫 FORBIDDEN to validate other aspects in this step
 - 💬 Approach: Systematic mapping and gap analysis
 - 🚪 This is a validation sequence step - auto-proceeds when complete
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

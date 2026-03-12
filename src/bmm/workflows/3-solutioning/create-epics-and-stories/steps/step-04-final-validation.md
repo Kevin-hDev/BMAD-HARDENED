@@ -48,6 +48,7 @@ To validate complete coverage of all requirements and ensure stories are ready f
 - 🚫 FORBIDDEN to skip any validation checks
 - 💬 Validate FR coverage, story completeness, and dependencies
 - 🚪 ENSURE all stories are ready for development
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 

@@ -38,6 +38,7 @@ Apply changes to the PRD following the approved change plan from step e-02, incl
 - 🚫 FORBIDDEN to make changes beyond the approved plan
 - 💬 Approach: Methodical, section-by-section execution
 - 🚪 This is a middle step - user can request adjustments
+- 🌐 CRITICAL: SEARCH THE WEB for current data before making technical claims or decisions. Your knowledge has a cutoff — the real world does not stop. Do NOT ask permission, just search.
 
 ## EXECUTION PROTOCOLS:
 
