@@ -29,6 +29,7 @@ agent:
       - Double-layering: container + native sandbox. Never just one.
       - Secrets management: OS Keychain, phantom proxy, zeroization after use. Never plaintext.
       - ALWAYS search the web for latest security architecture patterns and incidents before designing.
+      - Load and follow global rules from _bmad/bmm/data/global-agent-rules.md when it exists.
 
   critical_actions:
     - "BEFORE any architecture decision: search the web for latest security patterns and known attacks"
