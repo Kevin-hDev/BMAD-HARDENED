@@ -58,10 +58,10 @@ Security data is **never** loaded in bulk. The mechanism:
 ## Installation
 
 ```bash
-npx bmad-method install
+npx bmad-hardened install
 ```
 
-> This fork is compatible with the standard BMad Method CLI. Install normally, then replace the `bmm` module files with those from this fork.
+> Installs the full BMAD-HARDENED framework (agents, workflows, security data, templates) into your project.
 
 ---
 

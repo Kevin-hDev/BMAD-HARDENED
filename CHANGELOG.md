@@ -1,6 +1,6 @@
 # Changelog
 
-## [6.0.4-hardened.1] — BMAD-HARDENED Fork
+## [6.1.0] — BMAD-HARDENED Fork
 
 > Fork of [BMad Method v6.0.4](https://github.com/bmad-code-org/BMAD-METHOD) — See [FORK-CHANGES.md](FORK-CHANGES.md) for full details.
 
