@@ -2,15 +2,15 @@
 
 ## BMAD-HARDENED Fork
 
-Ce projet est un fork communautaire de [BMad Method](https://github.com/bmad-code-org/BMAD-METHOD) par Brian (BMad) Madison / BMad Code, LLC.
+This project is a community fork of [BMad Method](https://github.com/bmad-code-org/BMAD-METHOD) by Brian (BMad) Madison / BMad Code, LLC.
 
-**Fork maintenu par :** Kevin Huynh ([@Kevin-hDev](https://github.com/Kevin-hDev))
+**Fork maintained by:** Kevin Huynh ([@Kevin-hDev](https://github.com/Kevin-hDev))
 
-Voir [FORK-CHANGES.md](FORK-CHANGES.md) pour la liste des modifications.
+See [FORK-CHANGES.md](FORK-CHANGES.md) for the list of changes.
 
 ---
 
-## Projet original
+## Original project
 
 BMad Core, BMad Method and BMad and Community BMad Modules are made possible by contributions from our community. We gratefully acknowledge everyone who has helped improve this project.
 
