@@ -51,7 +51,15 @@ This uses **step-file architecture** for disciplined execution:
 Load and read full config from {project-root}/_bmad/bmm/config.yaml and resolve:
 
 - `project_name`, `output_folder`, `planning_artifacts`, `user_name`, `communication_language`, `document_output_language`
+- `security_data` = `{project-root}/_bmad/bmm/data/security`
 - ✅ YOU MUST ALWAYS SPEAK OUTPUT In your Agent communication style with the config `{communication_language}`
+
+### Security Data
+
+When creating stories that touch auth, crypto, network, input handling, LLM, or isolation:
+1. Load `{security_data}/index.md` to identify relevant security reference files
+2. Load matching files (2-3 max) to inform security acceptance criteria
+3. Ensure security-critical stories include explicit security ACs informed by defense patterns
 
 ### 2. First Step EXECUTION
 

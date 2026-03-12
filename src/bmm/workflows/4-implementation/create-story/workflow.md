@@ -52,6 +52,7 @@ Load config from `{project-root}/_bmad/bmm/config.yaml` and resolve:
 | architecture | Architecture (fallback - epics file should have relevant sections) | whole: `{planning_artifacts}/*architecture*.md`, sharded: `{planning_artifacts}/*architecture*/*.md` | SELECTIVE_LOAD |
 | ux | UX design (fallback - epics file should have relevant sections) | whole: `{planning_artifacts}/*ux*.md`, sharded: `{planning_artifacts}/*ux*/*.md` | SELECTIVE_LOAD |
 | epics | Enhanced epics+stories file with BDD and source hints | whole: `{planning_artifacts}/*epic*.md`, sharded: `{planning_artifacts}/*epic*/*.md` | SELECTIVE_LOAD |
+| security_data | Security reference data for enriching security ACs | index: `{project-root}/_bmad/bmm/data/security/index.md`, files: `{project-root}/_bmad/bmm/data/security/*.md` | INDEX_THEN_SELECTIVE |
 
 ---
 
@@ -274,6 +275,14 @@ Load config from `{project-root}/_bmad/bmm/config.yaml` and resolve:
   processes - **Integration Patterns:** External service integrations, data flows <action>Extract any story-specific requirements that the
   developer MUST follow</action>
   <action>Identify any architectural decisions that override previous patterns</action>
+
+  <!-- Security Data enrichment -->
+  <check if="story touches security-relevant domains (auth, crypto, network, input handling, LLM, IPC, isolation)">
+    <action>Load {project-root}/_bmad/bmm/data/security/index.md</action>
+    <action>Select 2-3 relevant security data files based on tags matching the story domain</action>
+    <action>Extract security patterns and review checklists that should inform acceptance criteria</action>
+    <action>Include security-specific developer guardrails in the story file</action>
+  </check>
 </step>
 
 <step n="4" goal="Web research for latest technical specifics">

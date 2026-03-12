@@ -39,6 +39,14 @@ Load config from `{project-root}/_bmad/bmm/config.yaml` and resolve:
 - `installed_path` = `{project-root}/_bmad/bmm/workflows/3-solutioning/create-architecture`
 - `template_path` = `{installed_path}/architecture-decision-template.md`
 - `data_files_path` = `{installed_path}/data/`
+- `security_data` = `{project-root}/_bmad/bmm/data/security`
+
+### Security Data
+
+When architecture decisions involve auth, crypto, network, isolation, or LLM integration:
+1. Load `{security_data}/index.md` to see available security reference files
+2. Select files whose tags match the architecture domains being decided
+3. Use attack patterns (atk-*) and defense patterns (def-*) to inform decisions
 
 ---
 

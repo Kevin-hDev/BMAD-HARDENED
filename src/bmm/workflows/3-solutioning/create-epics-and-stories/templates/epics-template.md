@@ -27,6 +27,22 @@ This document provides the complete epic and story breakdown for {{project_name}
 
 {{requirements_coverage_map}}
 
+## Story Size Rules
+
+> CRITICAL: Each story MUST be small enough to implement in a SINGLE Claude Code session (~200k tokens).
+> A story that causes context compaction = a story that loses context = bugs and rework.
+
+| Constraint | Max | If exceeded |
+|---|---|---|
+| Acceptance Criteria per story | 5 | Split into sub-stories |
+| Tasks per story | 3 | Split into sub-stories |
+| Files modified per story | 5-7 | Split by domain/layer |
+| Estimated implementation | 1 session | Split into smaller stories |
+
+> Format: concise Given/When/Then. No prose. No explanations in AC — only verifiable criteria.
+
+---
+
 ## Epic List
 
 {{epics_list}}
@@ -45,13 +61,21 @@ As a {{user_type}},
 I want {{capability}},
 So that {{value_benefit}}.
 
-**Acceptance Criteria:**
+**Acceptance Criteria:** (max 5)
 
 <!-- for each AC on this story -->
 
 **Given** {{precondition}}
 **When** {{action}}
 **Then** {{expected_outcome}}
-**And** {{additional_criteria}}
 
 <!-- End story repeat -->
+
+---
+
+## Feature Coverage Check
+
+> At the end of epic/story creation, verify against checkup-feature.md:
+> - [ ] Every feature in checkup-feature.md has at least 1 story
+> - [ ] Every security-critical feature has security acceptance criteria
+> - [ ] No feature has been silently dropped

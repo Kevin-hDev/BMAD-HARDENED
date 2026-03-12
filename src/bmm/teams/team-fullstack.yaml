@@ -9,4 +9,7 @@ agents:
   - pm
   - sm
   - ux-designer
+  - cybersecurity-expert
+  - security-architect
+  - geek
 party: "./default-party.csv"

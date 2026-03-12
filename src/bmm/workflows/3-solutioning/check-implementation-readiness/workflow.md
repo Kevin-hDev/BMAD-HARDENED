@@ -47,7 +47,15 @@ description: 'Validate PRD, UX, Architecture and Epics specs are complete. Use w
 Load and read full config from {project-root}/_bmad/bmm/config.yaml and resolve:
 
 - `project_name`, `output_folder`, `planning_artifacts`, `user_name`, `communication_language`, `document_output_language`
+- `security_data` = `{project-root}/_bmad/bmm/data/security`
 - ✅ YOU MUST ALWAYS SPEAK OUTPUT In your Agent communication style with the config `{communication_language}`
+
+### Security Validation
+
+Before declaring implementation-ready, verify:
+1. Load `{security_data}/index.md` and check that security-critical features have matching security ACs in stories
+2. Verify architecture addresses trust boundaries, isolation, crypto choices, and auth patterns
+3. Flag any security gap as BLOCKING — implementation cannot start with unaddressed security gaps
 
 ### 2. First Step EXECUTION
 

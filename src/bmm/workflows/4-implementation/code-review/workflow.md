@@ -127,13 +127,41 @@ Load config from `{project-root}/_bmad/bmm/config.yaml` and resolve:
     4. Record specific proof (file:line)
   </action>
 
+  <!-- Security Deep Dive (Nyx mindset) -->
+  <critical>SECURITY PASS FIRST — Think like an attacker</critical>
+  <action>Load {project-root}/_bmad/bmm/data/security/index.md if it exists</action>
+  <action>From the index, identify which security data files match the story's domain (match tags to code being reviewed)</action>
+  <action>Load ONLY the 3-5 most relevant security data files — never load all files</action>
+  <action>For EACH file in comprehensive review list, check SECURITY:
+    1. **Input validation**: Every external input validated? Zod schemas? SQL prepared statements?
+    2. **Command injection**: Any exec(), eval(), shell concatenation? Must use execFile() with array args
+    3. **Secret handling**: Secrets compared with timingSafeEqual? Never == or ===? Never logged?
+    4. **Collections**: Any Map/List/Set fed by external input without maxSize + eviction?
+    5. **Error messages**: Any internal info (paths, stack traces, table names) exposed to user?
+    6. **Crypto**: CSPRNG only? No Math.random()? Correct algorithms (Argon2id, AES-256-GCM, Ed25519)?
+    7. **Catch blocks**: Any empty catch {}? Must fail closed
+    8. **Dependencies**: Any known vulnerable deps? Any exec/eval in deps?
+    9. **Prototype pollution**: Object.create(null) for dictionaries? __proto__ filtered?
+    10. **Path traversal**: path.resolve() + startsWith() on all file paths?
+  </action>
+
   <!-- Code Quality Deep Dive -->
-  <action>For EACH file in comprehensive review list:
-    1. **Security**: Look for injection risks, missing validation, auth issues
-    2. **Performance**: N+1 queries, inefficient loops, missing caching
-    3. **Error Handling**: Missing try/catch, poor error messages
-    4. **Code Quality**: Complex functions, magic numbers, poor naming
+  <action>For EACH file in comprehensive review list, check CODE QUALITY:
+    1. **Performance**: N+1 queries, inefficient loops, missing caching
+    2. **Error Handling**: Missing try/catch, poor error messages, silent failures
+    3. **Code Quality**: Complex functions (>50 lines), magic numbers, poor naming
+    4. **Duplication**: Any copy-pasted code? Must be factored
     5. **Test Quality**: Are tests real assertions or placeholders?
+  </action>
+
+  <!-- Scope Guard -->
+  <critical>SCOPE CHECK — The review agent must NOT rewrite code beyond the story scope</critical>
+  <action>Verify the reviewer is NOT:
+    - Rewriting code in files not modified by the story
+    - Adding features not in the acceptance criteria
+    - Refactoring code unrelated to the story
+    - Adding comments/docstrings to unchanged code
+    If scope violations detected: flag as SCOPE_VIOLATION and do NOT apply
   </action>
 
   <check if="total_issues_found lt 3">

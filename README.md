@@ -1,109 +1,91 @@
-![BMad Method](banner-bmad-method.png)
+# BMAD-HARDENED
 
-[![Version](https://img.shields.io/npm/v/bmad-method?color=blue&label=version)](https://www.npmjs.com/package/bmad-method)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)](https://nodejs.org)
-[![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289da?logo=discord&logoColor=white)](https://discord.gg/gk8jAdXWmj)
+[![Based on BMad Method](https://img.shields.io/badge/Based%20on-BMad%20Method%20v6-blue)](https://github.com/bmad-code-org/BMAD-METHOD)
 
-**Build More Architect Dreams** — An AI-driven agile development module for the BMad Method Module Ecosystem, the best and most comprehensive Agile AI Driven Development framework that has true scale-adaptive intelligence that adjusts from bug fixes to enterprise systems.
+**Fork communautaire de la [BMad Method](https://github.com/bmad-code-org/BMAD-METHOD)** avec un renforcement sécurité intégré dans tout le cycle de vie agile.
 
-**100% free and open source.** No paywalls. No gated content. No gated Discord. We believe in empowering everyone, not just those who can pay for a gated community or courses.
-
-## Why the BMad Method?
-
-Traditional AI tools do the thinking for you, producing average results. BMad agents and facilitated workflows act as expert collaborators who guide you through a structured process to bring out your best thinking in partnership with the AI.
-
-- **AI Intelligent Help** — Invoke the `bmad-help` skill anytime for guidance on what's next
-- **Scale-Domain-Adaptive** — Automatically adjusts planning depth based on project complexity
-- **Structured Workflows** — Grounded in agile best practices across analysis, planning, architecture, and implementation
-- **Specialized Agents** — 12+ domain experts (PM, Architect, Developer, UX, Scrum Master, and more)
-- **Party Mode** — Bring multiple agent personas into one session to collaborate and discuss
-- **Complete Lifecycle** — From brainstorming to deployment
-
-[Learn more at **docs.bmad-method.org**](https://docs.bmad-method.org)
+> **Credit** : Ce projet est un fork de **[BMad Method](https://github.com/bmad-code-org/BMAD-METHOD)** par **Brian (BMad) Madison / [BMad Code, LLC](https://github.com/bmad-code-org)**. Tout le framework de base, l'architecture des agents, les workflows et le CLI sont son travail. BMAD-HARDENED ajoute une couche sécurité par-dessus cette fondation.
 
 ---
 
-## 🚀 What's Next for BMad?
+## Ce que BMAD-HARDENED ajoute
 
-**V6 is here and we're just getting started!** The BMad Method is evolving rapidly with optimizations including Cross Platform Agent Team and Sub Agent inclusion, Skills Architecture, BMad Builder v1, Dev Loop Automation, and so much more in the works.
+### 3 nouveaux agents sécurité (Party Mode)
 
-**[📍 Check out the complete Roadmap →](https://docs.bmad-method.org/roadmap/)**
+| Agent | Nom | Role |
+|-------|------|------|
+| 🛡️ Cybersecurity Expert | **Nyx** | Analyse de vulnérabilités, OWASP, CVE tracking, supply chain, sécurité LLM |
+| 🏰 Security Architect | **Bastion** | Threat modeling STRIDE/DREAD, zero-trust, isolation, crypto design |
+| 🤓 Tech Genius | **Zero** | Veille techno bleeding-edge, alternatives aux solutions mainstream |
+
+### 1 nouveau workflow : Security Review
+
+Audit de sécurité complet de l'architecture, du PRD et des stories **avant** l'implémentation. Intégré dans la phase 3 (Solutioning).
+
+### 24 fichiers de DATA sécurité universels
+
+Base de connaissances sécurité chargeable **à la demande** par n'importe quel agent/workflow via un système d'index par tags :
+
+- **11 patterns d'attaque** (`atk-*`) : injection LLM, supply chain, privilege escalation, reverse engineering...
+- **10 patterns de défense** (`def-*`) : crypto, auth, isolation OS, hardening framework, audit logging...
+- **3 fichiers de référence** (`ref-*`) : threat model agent, matrice de cross-validation, catalogue CVE
+
+Tous les fichiers sont **agnostiques** en langage/framework — ils décrivent des patterns universels.
+
+### Renforcement des agents et workflows existants
+
+- **Tous les agents** : recherche web systématique avant chaque travail + respect des global rules
+- **Code Review** : deep dive sécurité adversarial ajouté au workflow
+- **5 workflows** enrichis avec chargement conditionnel des data sécurité (INDEX_THEN_SELECTIVE)
+- **Global Agent Rules** : web search obligatoire, checkup feature, story size enforcement, review scope guard
+- **Implementation Readiness** : gate sécurité bloquante avant le passage en Phase 4
+
+### Stratégie de chargement : INDEX_THEN_SELECTIVE
+
+Les données sécurité ne sont **jamais** chargées en bloc. Le mécanisme :
+1. L'agent/workflow charge `index.md` (listing des fichiers avec tags)
+2. Il match les tags avec le contexte actuel (stack, domaine, story)
+3. Il charge **seulement 3-5 fichiers** pertinents
+
+3 couches de défense garantissent le chargement :
+1. Global rules → référencent index.md
+2. Chaque workflow → instructions explicites de chargement
+3. Critical actions des agents → référencent index.md
 
 ---
 
-## Quick Start
-
-**Prerequisites**: [Node.js](https://nodejs.org) v20+
+## Installation
 
 ```bash
 npx bmad-method install
 ```
 
-> Want the newest prerelease build? Use `npx bmad-method@next install`. Expect higher churn than the default install.
-
-Follow the installer prompts, then open your AI IDE (Claude Code, Cursor, etc.) in your project folder.
-
-**Non-Interactive Installation** (for CI/CD):
-
-```bash
-npx bmad-method install --directory /path/to/project --modules bmm --tools claude-code --yes
-```
-
-[See all installation options](https://docs.bmad-method.org/how-to/non-interactive-installation/)
-
-> **Not sure what to do?** Ask `bmad-help` — it tells you exactly what's next and what's optional. You can also ask questions like `bmad-help I just finished the architecture, what do I do next?`
-
-## Modules
-
-BMad Method extends with official modules for specialized domains. Available during installation or anytime after.
-
-| Module                                                                                                            | Purpose                                           |
-| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| **[BMad Method (BMM)](https://github.com/bmad-code-org/BMAD-METHOD)**                                             | Core framework with 34+ workflows                 |
-| **[BMad Builder (BMB)](https://github.com/bmad-code-org/bmad-builder)**                                           | Create custom BMad agents and workflows           |
-| **[Test Architect (TEA)](https://github.com/bmad-code-org/bmad-method-test-architecture-enterprise)**             | Risk-based test strategy and automation           |
-| **[Game Dev Studio (BMGD)](https://github.com/bmad-code-org/bmad-module-game-dev-studio)**                        | Game development workflows (Unity, Unreal, Godot) |
-| **[Creative Intelligence Suite (CIS)](https://github.com/bmad-code-org/bmad-module-creative-intelligence-suite)** | Innovation, brainstorming, design thinking        |
-
-## Documentation
-
-[BMad Method Docs Site](https://docs.bmad-method.org) — Tutorials, guides, concepts, and reference
-
-**Quick links:**
-- [Getting Started Tutorial](https://docs.bmad-method.org/tutorials/getting-started/)
-- [Upgrading from Previous Versions](https://docs.bmad-method.org/how-to/upgrade-to-v6/)
-- [Test Architect Documentation](https://bmad-code-org.github.io/bmad-method-test-architecture-enterprise/)
-
-
-## Community
-
-- [Discord](https://discord.gg/gk8jAdXWmj) — Get help, share ideas, collaborate
-- [Subscribe on YouTube](https://www.youtube.com/@BMadCode) — Tutorials, master class, and podcast (launching Feb 2025)
-- [GitHub Issues](https://github.com/bmad-code-org/BMAD-METHOD/issues) — Bug reports and feature requests
-- [Discussions](https://github.com/bmad-code-org/BMAD-METHOD/discussions) — Community conversations
-
-## Support BMad
-
-BMad is free for everyone — and always will be. If you'd like to support development:
-
-- ⭐ Please click the star project icon near the top right of this page
-- ☕ [Buy Me a Coffee](https://buymeacoffee.com/bmad) — Fuel the development
-- 🏢 Corporate sponsorship — DM on Discord
-- 🎤 Speaking & Media — Available for conferences, podcasts, interviews (BM on Discord)
-
-## Contributing
-
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-MIT License — see [LICENSE](LICENSE) for details.
+> Ce fork est compatible avec le CLI standard de BMad Method. Installez-le normalement, puis remplacez les fichiers du module `bmm` par ceux de ce fork.
 
 ---
 
-**BMad** and **BMAD-METHOD** are trademarks of BMad Code, LLC. See [TRADEMARK.md](TRADEMARK.md) for details.
+## Projet original
 
-[![Contributors](https://contrib.rocks/image?repo=bmad-code-org/BMAD-METHOD)](https://github.com/bmad-code-org/BMAD-METHOD/graphs/contributors)
+**[BMad Method](https://github.com/bmad-code-org/BMAD-METHOD)** par Brian (BMad) Madison / BMad Code, LLC
 
-See [CONTRIBUTORS.md](CONTRIBUTORS.md) for contributor information.
+- [Documentation officielle](https://docs.bmad-method.org)
+- [Discord communautaire](https://discord.gg/gk8jAdXWmj)
+- [Soutenir BMad](https://buymeacoffee.com/bmad)
+
+---
+
+## Changelog
+
+Voir [FORK-CHANGES.md](FORK-CHANGES.md) pour la liste complète des modifications apportées par ce fork.
+
+Voir [CHANGELOG.md](CHANGELOG.md) pour l'historique du projet original.
+
+## License
+
+MIT License — voir [LICENSE](LICENSE).
+
+---
+
+**BMad** et **BMAD-METHOD** sont des marques de BMad Code, LLC. Voir [TRADEMARK.md](TRADEMARK.md).
+Ce fork est un projet communautaire non officiel, non affilié ni approuvé par BMad Code, LLC.

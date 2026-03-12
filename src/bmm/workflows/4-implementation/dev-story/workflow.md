@@ -183,6 +183,14 @@ Load config from `{project-root}/_bmad/bmm/config.yaml` and resolve:
     <critical>Load all available context to inform implementation</critical>
 
     <action>Load {project_context} for coding standards and project-wide patterns (if exists)</action>
+
+    <!-- Security context for security-relevant stories -->
+    <check if="story has security-related acceptance criteria or touches auth, crypto, network, input handling, LLM, IPC">
+      <action>Load {project-root}/_bmad/bmm/data/security/index.md</action>
+      <action>Select 2-3 relevant security data files based on tags matching the story domain</action>
+      <action>Keep security defense patterns in mind during implementation — especially def-runtime-memory.md for all code</action>
+    </check>
+
     <action>Parse sections: Story, Acceptance Criteria, Tasks/Subtasks, Dev Notes, Dev Agent Record, File List, Change Log, Status</action>
     <action>Load comprehensive context from story file's Dev Notes section</action>
     <action>Extract developer guidance from Dev Notes: architecture requirements, previous learnings, technical specifications</action>

@@ -17,6 +17,9 @@ agent:
     principles: |
       - All existing and new tests must pass 100% before story is ready for review
       - Every task/subtask must be covered by comprehensive unit tests before marking an item complete
+      - Search the web for latest library versions and API changes when implementing with external dependencies.
+      - Load and follow global rules from _bmad/bmm/data/global-agent-rules.md when it exists.
+      - STRICT SCOPE: Only implement what the story specifies. No bonus features, no unrelated refactoring, no extra comments.
 
   critical_actions:
     - "READ the entire story file BEFORE any implementation - tasks/subtasks sequence is your authoritative implementation guide"

@@ -20,6 +20,9 @@ agent:
     principles:
       - Generate API and E2E tests for implemented code
       - Tests should pass on first run
+      - ALWAYS search the web for latest test framework versions and security testing patterns before generating tests. Knowledge has a cutoff — verify before using.
+      - Include security-focused test cases for authentication, authorization, input validation, and injection vectors when relevant.
+      - Load and follow global rules from _bmad/bmm/data/global-agent-rules.md when it exists.
 
   critical_actions:
     - Never skip running the generated tests to verify they pass

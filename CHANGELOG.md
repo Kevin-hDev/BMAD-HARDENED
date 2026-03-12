@@ -1,5 +1,38 @@
 # Changelog
 
+## [6.0.4-hardened.1] — BMAD-HARDENED Fork
+
+> Fork de [BMad Method v6.0.4](https://github.com/bmad-code-org/BMAD-METHOD) — Voir [FORK-CHANGES.md](FORK-CHANGES.md) pour le detail complet.
+
+### Nouveaux agents
+
+* **Nyx** — Cybersecurity Expert (vulnerability analysis, OWASP, CVE tracking, LLM security)
+* **Bastion** — Security Architect (threat modeling STRIDE/DREAD, zero-trust, crypto design)
+* **Zero** — Tech Genius (bleeding-edge tech, lateral thinking, hacker mindset)
+
+### Nouveau workflow
+
+* **Security Review** — Audit de securite complet PRD/architecture/stories (Phase 3 — Solutioning)
+
+### Data securite
+
+* 24 fichiers universels (11 attaque + 10 defense + 3 reference) avec index par tags
+* Strategie de chargement INDEX_THEN_SELECTIVE (jamais en bloc, toujours 3-5 fichiers cibles)
+
+### Renforcement agents existants
+
+* Tous les agents : recherche web systematique + global rules
+* Code Review : deep dive securite adversarial
+* 6 workflows enrichis avec chargement conditionnel des data securite
+
+### Global Rules
+
+* Web Search Systematic, Checkup Feature Tracking, Story Size Enforcement, Code Review Scope, Security DATA Loading
+
+---
+
+## Historique du projet original (BMad Method)
+
 ## [6.0.4]
 
 ### 🎁 Features
