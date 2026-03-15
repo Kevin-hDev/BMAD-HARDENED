@@ -8,10 +8,20 @@ architect.agent.yaml:
   type: agent
   description: "Architect for distributed systems, cloud infrastructure, and API design"
 
+cybersecurity-expert.agent.yaml:
+  canonicalId: bmad-cybersecurity-expert
+  type: agent
+  description: "Cybersecurity Expert for threat modeling, vulnerability assessment, and security hardening"
+
 dev.agent.yaml:
   canonicalId: bmad-dev
   type: agent
   description: "Developer Agent for story execution, test-driven development, and code implementation"
+
+geek.agent.yaml:
+  canonicalId: bmad-geek
+  type: agent
+  description: "Geek Agent for deep technical research, PoC development, and technology evaluation"
 
 pm.agent.yaml:
   canonicalId: bmad-pm
@@ -28,10 +38,20 @@ quick-flow-solo-dev.agent.yaml:
   type: agent
   description: "Quick Flow Solo Dev for rapid spec creation and lean implementation"
 
+security-architect.agent.yaml:
+  canonicalId: bmad-security-architect
+  type: agent
+  description: "Security Architect for security architecture, threat modeling, and secure design patterns"
+
 sm.agent.yaml:
   canonicalId: bmad-sm
   type: agent
   description: "Scrum Master for sprint planning, story preparation, and agile ceremonies"
+
+the-mask.agent.yaml:
+  canonicalId: bmad-the-mask
+  type: agent
+  description: "The Mask — Elite Red Team Operator for exploit demonstration and offensive security testing"
 
 ux-designer.agent.yaml:
   canonicalId: bmad-ux-designer

@@ -1,0 +1,248 @@
+# BMAD-HARDENED v2 Constitution
+# Source unique de vérité pour toutes les règles non-négociables
+# JAMAIS modifiable par l'IA — seul l'humain peut modifier ce fichier
+# Consolidé depuis : global-agent-rules.md, CLAUDE.md, agent YAML principles,
+#                    workflow PRE-EXECUTION blocks, shared/meta/ files
+
+version: "2.0.0"
+
+# =============================================================================
+# PRINCIPES NON-NÉGOCIABLES
+# Consolidés depuis global-agent-rules.md + agent YAML principles
+# =============================================================================
+principles:
+
+  web_search_systematic:
+    description: "Recherche web AVANT de travailler sur un sujet"
+    triggers:
+      - "décision technique nécessitant des données actuelles (versions, CVEs)"
+      - "analyse marché ou concurrence"
+      - "review sécurité référençant des patterns ou menaces"
+      - "architecture référençant des technologies spécifiques"
+      - "toute connaissance susceptible d'être outdatée"
+    enforcement: "TOUJOURS, sans demander permission, avant d'exécuter le workflow"
+
+  story_size_enforcement:
+    description: "Stories assez petites pour une session Claude Code unique"
+    limits:
+      max_acceptance_criteria: 5
+      max_tasks: 3
+      max_files_modified: 7
+    action_if_exceeded: "Découper en sub-stories AVANT toute implémentation"
+
+  checkup_feature_tracking:
+    description: "Tracking des features après chaque phase complétée"
+    steps:
+      - "Charger {planning_artifacts}/checkup-feature.md si existe"
+      - "Vérifier que toutes les features sont trackées dans la phase courante"
+      - "Flagger les features non adressées dans la phase"
+      - "Ajouter les nouvelles features découvertes durant la phase"
+
+  code_review_scope:
+    description: "Review limitée strictement aux fichiers de la story"
+    forbidden:
+      - "Réécrire du code dans des fichiers non modifiés par la story"
+      - "Ajouter des features hors acceptance criteria"
+      - "Refactorer du code non lié à la story"
+      - "Ajouter docstrings ou commentaires au code inchangé"
+
+  security_data_loading:
+    description: "Chargement INDEX_THEN_SELECTIVE pour les fichiers sécurité"
+    steps:
+      - "Charger {project-root}/_bmad/bmm/data/security/index.md EN PREMIER"
+      - "Matcher les tags de l'index avec le contexte (stack, domaine de la story)"
+      - "Charger UNIQUEMENT les 3-5 fichiers les plus pertinents"
+      - "JAMAIS charger tous les fichiers sécurité en même temps"
+    triggers:
+      - "story avec ACs liés à la sécurité"
+      - "fichiers touchant auth, crypto, réseau, input handling, LLM, IPC"
+
+  dev_story_execution:
+    description: "Exécution story dev : continu, sans pause, sans mensonge"
+    rules:
+      - "Lire le fichier story COMPLET avant toute implémentation"
+      - "Exécuter tasks/subtasks DANS L'ORDRE exact du fichier story"
+      - "Marquer [x] UNIQUEMENT quand implémentation ET tests sont complets et passent"
+      - "Lancer la suite complète après chaque task — JAMAIS continuer avec tests échoués"
+      - "Ne PAS s'arrêter pour des 'milestones' ou 'session boundaries'"
+      - "JAMAIS mentir sur des tests écrits ou passants"
+
+# =============================================================================
+# 10 RÉFLEXES SÉCURITÉ
+# Source : shared/meta/security-rules.md + CLAUDE.md global
+# =============================================================================
+security_reflexes:
+  - id: 1
+    rule: "JAMAIS == pour comparer un secret — XOR byte par byte (temps constant)"
+    check: "Grep token/secret/key/password/hash/hmac/signature pour ==  ou .equals()"
+
+  - id: 2
+    rule: "JAMAIS de collection sans limite alimentée de l'extérieur — maxSize + éviction LRU/FIFO"
+    check: "Toute Map/List/Set recevant données HTTP, WebSocket, upload, formulaire"
+
+  - id: 3
+    rule: "JAMAIS de secret en dur dans le code — variable d'environnement ou keystore OS"
+    check: "Grep sk_, pk_, Bearer, password =, secret = dans le code source"
+
+  - id: 4
+    rule: "JAMAIS traiter une entrée sans valider type/longueur/format — SQL=prepared, HTML=échappé, chemins=sans .."
+    check: "Chaque point d'entrée externe : HTTP, CLI, fichier, formulaire"
+
+  - id: 5
+    rule: "JAMAIS d'info interne dans les erreurs visibles — zéro chemin, stack trace, nom de table, version de lib"
+    check: "Messages d'erreur retournés à l'utilisateur ou l'API consommatrice"
+
+  - id: 6
+    rule: "JAMAIS Math.random() pour token/ID/nonce — CSPRNG uniquement (crypto.randomBytes, OsRng, secrets)"
+    check: "Tout identifiant, token, nonce, sel cryptographique"
+
+  - id: 7
+    rule: "JAMAIS concaténer dans une commande système — arguments séparés en liste, validation regex avant"
+    check: "subprocess, exec, shell=True, template strings dans commandes système"
+
+  - id: 8
+    rule: "JAMAIS de catch vide — logger l'erreur ET bloquer (fail CLOSED, jamais laisser passer)"
+    check: "catch {}, except: pass, _ => {} silencieux dans le code"
+
+  - id: 9
+    rule: "JAMAIS logger des données sensibles — filtrer tokens/mots de passe/clés avant tout log"
+    check: "log::, console.log, print dans fonctions contenant token/password/key/secret"
+
+  - id: 10
+    rule: "JAMAIS laisser un secret en RAM — zéroïser buffer après usage, ne pas compter sur le GC"
+    check: "Buffers contenant password, clé, token après leur utilisation"
+
+security_self_check:
+  description: "5 questions avant chaque fonction — un seul NON = bloquer et corriger"
+  questions:
+    - "Si un attaquant contrôle cette entrée, que se passe-t-il ?"
+    - "Si cette opération échoue, est-ce que ça bloque ou ça laisse passer ?"
+    - "Est-ce que je compare des secrets avec == ?"
+    - "Est-ce que cette collection peut grossir indéfiniment ?"
+    - "Est-ce que ce message d'erreur révèle des informations internes ?"
+
+# =============================================================================
+# 8 RÉFLEXES STRUCTURE
+# Source : shared/meta/structure-rules.md + CLAUDE.md global
+# =============================================================================
+structure_reflexes:
+  - id: 1
+    rule: "JAMAIS de fichier de code > 250 lignes — découper en modules à responsabilité unique"
+    target: "50-150 lignes par fichier (idéal)"
+
+  - id: 2
+    rule: "JAMAIS dupliquer du code — grep avant d'écrire, réutiliser si trouvé"
+    check: "grep -r 'fn nom_candidat' src/ avant toute création de fonction"
+
+  - id: 3
+    rule: "JAMAIS de valeur en dur — couleurs/URLs/tailles/textes/délais dans fichier config/constantes"
+    exceptions: ["0", "1", "-1", '""', "true", "false quand sens évident dans contexte immédiat"]
+
+  - id: 4
+    rule: "JAMAIS mélanger les responsabilités — interface/logique métier/accès données dans fichiers séparés"
+    pattern: "handler.rs | service.rs | repository.rs | models.rs"
+
+  - id: 5
+    rule: "JAMAIS créer sans vérifier l'existant — recherche nom + recherche responsabilité avant création"
+
+  - id: 6
+    rule: "JAMAIS mélanger les conventions de nommage — un seul style cohérent dans tout le projet"
+    standards: "Rust=snake_case/PascalCase | TS=camelCase/PascalCase | Python=snake_case/PascalCase"
+
+  - id: 7
+    rule: "JAMAIS laisser du code mort — supprimer (pas commenter) code inutilisé, imports, fonctions abandonnées"
+
+  - id: 8
+    rule: "JAMAIS tout mettre à plat — organiser par domaine/feature (auth/, payments/, shared/)"
+
+structure_self_check:
+  description: "5 questions avant de créer ou modifier — un seul NON = bloquer et corriger"
+  questions:
+    - "Ce fichier dépasse-t-il 250 lignes ? Si oui → découper."
+    - "Cette fonction existe-t-elle déjà ailleurs ? Si oui → réutiliser."
+    - "Y a-t-il des valeurs en dur ? Si oui → centraliser."
+    - "Ce fichier mélange-t-il plusieurs responsabilités ? Si oui → séparer."
+    - "La convention de nommage est-elle cohérente avec le reste du projet ?"
+
+# =============================================================================
+# MODES — PERMISSIONS PAR PHASE
+# Source : shared/meta/modes.md (adapté vocabulaire BMAD : Epic/Story)
+# =============================================================================
+modes:
+  ANALYZE:
+    description: "Exploration, collecte d'informations, web search"
+    allowed: ["lire fichiers", "explorer structure", "web search", "sous-agents lecture"]
+    forbidden: ["créer ou modifier fichiers source", "créer fichiers de plan", "commandes système", "git"]
+
+  PLAN:
+    description: "Rédaction du plan, specs, stories"
+    allowed: ["lire fichiers", "rédiger plan dans checkpoint.json", "créer/modifier fichiers *.plan.md"]
+    forbidden: ["modifier fichiers source du projet", "commandes système", "git"]
+
+  CREATIVE:
+    description: "Design, exploration visuelle, 3 options minimum avant choix"
+    allowed: ["lire fichiers", "explorer design system", "web search références visuelles", "écrire design brief"]
+    forbidden: ["modifier fichiers source", "commandes système"]
+    note: "Exactement 3 options doivent être explorées avant de choisir"
+
+  EXECUTE:
+    description: "Implémentation du code (BMAD : dev-story)"
+    allowed: ["lire et écrire fichiers source", "commandes build/test/lint", "créer fichiers de test"]
+    forbidden: ["modifier le plan approuvé", "git"]
+    checkpoint: "Écrire checkpoint.json après chaque fichier modifié avec succès"
+
+  VALIDATE:
+    description: "Vérification des outputs — tests, lint, typecheck"
+    allowed: ["lire tous fichiers", "exécuter test/lint/typecheck/build", "screenshots Playwright"]
+    forbidden: ["modifier fichiers source", "git"]
+
+  HARDEN:
+    description: "Review sécurité — non-bypassable si risk_level MEDIUM ou HIGH"
+    allowed: ["lire tous fichiers modifiés", "analyser patterns sécurité", "écrire rapport sécurité"]
+    forbidden: ["modifier fichiers source", "git"]
+    note: "Flag --skip-harden ignoré silencieusement si MEDIUM ou HIGH"
+
+  SHIP:
+    description: "Opérations git uniquement"
+    allowed: ["git add/commit/push/PR", "écrire .hk/learnings.md"]
+    forbidden: ["modifier fichiers source", "modifier le plan"]
+
+# =============================================================================
+# SEUILS CENTRALISÉS
+# Source : shared/meta/confidence-checker.md + modes.md
+# =============================================================================
+thresholds:
+  confidence_proceed: 0.90        # requis pour PLAN → EXECUTE
+  confidence_post_validate: 0.85  # requis pour VALIDATE → HARDEN/SHIP
+  ascent_max_iterations: 3        # tentatives max avant HALT
+  wave_max_files: 5               # fichiers max par vague d'implémentation
+
+# =============================================================================
+# TRUST-ADAPTIVE SECURITY GATES
+# Source : shared/meta/modes.md (Trust-Adaptive Security Gates)
+# =============================================================================
+security_gates:
+  risk_patterns:
+    HIGH:
+      keywords: ["auth", "login", "password", "token", "secret", "key", "encrypt",
+                 "decrypt", "payment", "billing", "pii", "gdpr", "session", "cookie",
+                 "jwt", "oauth", "hmac", "certificate", "signature", "hash"]
+      directories: ["auth/", "security/", "crypto/", "payments/", "secrets/", "certificates/"]
+    MEDIUM:
+      keywords: ["api", "endpoint", "route", "handler", "middleware", "config", "env",
+                 "database", "query", "network", "socket", "http", "tls", "webhook"]
+      directories: ["api/", "middleware/", "config/", "database/"]
+
+  rules_by_level:
+    LOW:
+      harden_required: false
+      skip_harden_allowed: true
+      threat_modeling: none
+    MEDIUM:
+      harden_required: true
+      skip_harden_allowed: false
+      threat_modeling: "mini-STRIDE"
+    HIGH:
+      harden_required: true
+      skip_harden_allowed: false
+      threat_modeling: "STRIDE complet + Five-Persona"

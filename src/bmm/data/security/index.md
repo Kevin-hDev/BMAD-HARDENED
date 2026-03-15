@@ -51,6 +51,56 @@
 | ref-cross-validation-matrix.md | all, architecture | Attack-to-defense mapping, gap analysis template |
 | ref-cve-catalog.md | all | Notable CVEs by category (2019-2026), lessons learned |
 
+## The Mask — Offensive Techniques (the-mask/)
+
+> Charge UNIQUEMENT quand The Mask est actif (Party Mode / Red Team vs Blue Team Elicitation #17).
+> Activation : REACTIVE — pas de workflow dédié.
+> Techniques offensives avec PoCs. INDEX_THEN_SELECTIVE : charger 1-2 fichiers max selon le contexte.
+
+| File | Tags | Summary |
+|------|------|---------|
+| the-mask/atk-exploit-web.md | exploit, offensive, web, input, api, ssrf | SSRF→IMDS, SQLi blind/second-order, XSS (stored/DOM/mXSS), CSRF bypass, deserialization gadget chains |
+| the-mask/atk-exploit-desktop.md | exploit, offensive, desktop, ipc, binary, red-team | DLL hijacking, IPC abuse (pipes/D-Bus/XPC), sandbox escape Electron/Tauri, UAC/polkit/TCC bypass |
+| the-mask/atk-exploit-llm.md | exploit, offensive, llm, ai-agent, mcp, prompt-injection | Prompt injection directe/indirecte (XPIA), jailbreak patterns, exfil via tool use, MCP abuse |
+| the-mask/atk-exploit-mobile.md | exploit, offensive, mobile, binary, pentest | Cert pinning bypass (Frida/objection), deep link hijacking, WebView bridge RCE, keystore/keychain extraction |
+| the-mask/atk-exploit-chains.md | exploit, offensive, chain-attack, architecture, all | Chaînes multi-étapes : SSRF→IMDS→RCE, XSS→Admin→RCE, supply chain→CI/CD, prompt injection→exfil |
+| the-mask/atk-exploit-social.md | exploit, offensive, social-engineering, phishing, pentest | Spear phishing, MFA bypass EvilGinx, pretexting, typosquatting, OAuth consent phishing, credential stuffing |
+
+---
+
+## Platform-Specific (platform/)
+
+> Charger 1 seul fichier selon l'OS cible du projet.
+
+| File | Tags | Summary |
+|------|------|---------|
+| platform/platform-windows.md | windows, desktop, os | UAC bypass, DLL hijack, DPAPI, WDAC, AppContainer, WebView2 |
+| platform/platform-linux.md | linux, server, os | SELinux, seccomp, Landlock, namespaces, polkit, eBPF, D-Bus |
+| platform/platform-macos.md | macos, desktop, os | TCC, Gatekeeper, SIP, Hardened Runtime, dylib, XPC, Keychain |
+| platform/platform-ios.md | ios, mobile | Keychain, ATS, cert pinning, jailbreak, Frida, Universal Links |
+| platform/platform-android.md | android, mobile | KeyStore, Network Security Config, cert pinning, root, intents |
+
+## Stack-Specific (stack/)
+
+> Charger 1 seul fichier selon la stack detectee (cf. build-detection.md).
+
+| File | Tags | Summary |
+|------|------|---------|
+| stack/stack-python.md | python, django, flask, fastapi | ORM injection, SSTI, pickle, Werkzeug, PyPI supply chain |
+| stack/stack-js-node.md | javascript, node, express, nextjs, nestjs | Prototype pollution, React2Shell, middleware bypass, RSC |
+| stack/stack-php.md | php, laravel, livewire | PHPGGC, mass assignment, APP_KEY, Blade, Livewire, type juggling |
+| stack/stack-frontend.md | vue, nuxt, angular, svelte, sveltekit, vite, spa, frontend | v-html XSS, SSR leaks, supply chain SPA, CSP, Trusted Types |
+
+## Infrastructure (infra/)
+
+> Charger 1 fichier selon l'infra du projet.
+
+| File | Tags | Summary |
+|------|------|---------|
+| infra/infra-containers.md | docker, kubernetes, container, isolation | runc escape, RBAC, Pod security, IngressNightmare |
+| infra/infra-cicd.md | github-actions, gitlab, ci-cd, pipeline, supply-chain | Expression injection, runners, tj-actions, SLSA |
+| infra/infra-cloud.md | aws, gcp, azure, cloud, serverless, iam | SSRF→IMDS, IAM, Lambda injection, secrets management |
+
 ---
 
 ## Tag Quick Reference
@@ -69,3 +119,15 @@
 | Desktop application | desktop, ipc, binary |
 | Logging / auditing | monitoring |
 | Containers / sandboxing | isolation, os |
+| Windows desktop | windows, desktop |
+| Linux server | linux, server |
+| macOS desktop | macos, desktop |
+| iOS mobile | ios, mobile |
+| Android mobile | android, mobile |
+| Python backend | python + framework name |
+| Node.js backend | javascript, node |
+| PHP backend | php, laravel |
+| Vue/Angular/Svelte SPA | frontend, spa |
+| Docker / Kubernetes | container, docker, kubernetes |
+| CI/CD pipelines | ci-cd, pipeline |
+| AWS / GCP / Azure | cloud + provider name |

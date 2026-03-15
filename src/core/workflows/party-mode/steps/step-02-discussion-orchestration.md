@@ -58,6 +58,18 @@ Select 2-3 most relevant agents based on analysis:
 - Rotate agent participation over time to ensure inclusive discussion
 - Balance expertise domains for comprehensive perspectives
 
+### 2b. DATA Loading for Security Agents (The Mask / Cybersecurity Expert / Security Architect)
+
+When The Mask or a security agent is selected as participant:
+1. Load `{project-root}/_bmad/bmm/data/security/index.md` FIRST
+2. Match tags in the index against the topic being discussed
+3. Load 3-4 DATA files max based on relevance:
+   - The Mask → prefer `atk-*` files + `the-mask/atk-exploit-*` files (offensive only, NO def-* files)
+   - Cybersecurity Expert → prefer `def-*` files + `ref-cve-catalog.md`
+   - Security Architect → prefer `def-*` files + `atk-chain-patterns.md`
+4. The Mask is an OPPORTUNIST — he intervenes ONLY when he spots an exploitable flaw in the discussion.
+   He does NOT participate in every round. He stays silent until he sees an opening, then strikes.
+
 ### 3. In-Character Response Generation
 
 Generate authentic responses for each selected agent:

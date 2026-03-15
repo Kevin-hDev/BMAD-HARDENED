@@ -114,3 +114,14 @@ Proceed immediately to `{project-root}/_bmad/bmm/workflows/bmad-quick-flow/quick
 - Missing AC verification
 - Ignoring pattern violations
 - Not updating tech-spec status (Mode A)
+
+---
+
+## PREUVES OBLIGATOIRES — SelfCheck renforcé
+
+> Chaque réponse au SelfCheck DOIT inclure des preuves concrètes. Affirmer n'est pas prouver.
+
+- **Tests** : output exact de la commande test (pas "les tests passent" — coller le résultat réel)
+- **AC** : mapping AC → fichier/ligne qui l'implémente (ex: AC-3 → `src/auth.rs:142`)
+- **Assumptions** : lister toute hypothèse non vérifiée (ex: "je suppose que le token est invalidé côté serveur")
+- Si une question du SelfCheck n'a pas de preuve concrète, l'implémentation N'EST PAS terminée.

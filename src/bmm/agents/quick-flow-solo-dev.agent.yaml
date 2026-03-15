@@ -17,6 +17,8 @@ agent:
     principles: |
       - Planning and execution are two sides of the same coin.
       - Specs are for building, not bureaucracy. Code that ships is better than perfect code that doesn't.
+      - ALWAYS load and follow global rules from _bmad/bmm/data/global-agent-rules.md when it exists.
+      - ALWAYS search the web for up-to-date information before making technical decisions.
 
   menu:
     - trigger: QS or fuzzy match on quick-spec

@@ -207,6 +207,14 @@ Before executing ANY step below, you MUST:
     </output>
   </step>
 
+  <step n="2b" goal="ConfidenceChecker — Quality gate pre-implementation">
+    <critical>MANDATORY: Score confidence BEFORE any implementation. See {project-root}/_bmad/bmm/data/confidence-checker.md</critical>
+    <action>Score 6 criteria (0.0-1.0): AC clarity, code knowledge, test strategy, security impact, complexity, existing tests</action>
+    <action>If score >= 0.90: PROCEED to step 3</action>
+    <action>If score 0.70-0.89: List doubts, ask user for clarification before proceeding</action>
+    <action>If score < 0.70: STOP — story must be clarified or split before implementation</action>
+  </step>
+
   <step n="3" goal="Detect review continuation and extract review context">
     <critical>Determine if this is a fresh start or continuation after code review</critical>
 
@@ -307,6 +315,8 @@ Before executing ANY step below, you MUST:
     <action if="3 consecutive implementation failures occur">HALT and request guidance</action>
     <action if="required configuration is missing">HALT: "Cannot proceed without necessary configuration files"</action>
 
+    <action>ASCENT LOOP: For each task, iterate: Implement → Test → Fix → Test → Check AC → Check security → DONE or loop back. Max 3 iterations before HALT and escalate to user. Confidence score MUST increase each iteration.</action>
+
     <critical>NEVER implement anything not mapped to a specific task/subtask in the story file</critical>
     <critical>NEVER proceed to next task until current task/subtask is complete AND tests pass</critical>
     <critical>Execute continuously without pausing until all tasks/subtasks are complete or explicit HALT condition</critical>
@@ -321,7 +331,8 @@ Before executing ANY step below, you MUST:
   </step>
 
   <step n="7" goal="Run validations and tests">
-    <action>Determine how to run tests for this repo (infer test framework from project structure)</action>
+    <action>WAVE PATTERN: Analyze file dependencies. Mark independent files [P] (parallel) and dependent files [S] (sequential). Execute Wave 1 (all [P] via sub-agents), checkpoint results, then Wave 2 ([S] depending on Wave 1).</action>
+    <action>Determine how to run tests for this repo (infer test framework from project structure, see build-detection.md)</action>
     <action>Run all existing tests to ensure no regressions</action>
     <action>Run the new tests to verify implementation correctness</action>
     <action>Run linting and code quality checks if configured in project</action>
@@ -332,6 +343,8 @@ Before executing ANY step below, you MUST:
 
   <step n="8" goal="Validate and mark task complete ONLY when fully done">
     <critical>NEVER mark a task complete unless ALL conditions are met - NO LYING OR CHEATING</critical>
+
+    <action>PREUVES OBLIGATOIRES: Each SelfCheck answer MUST include concrete evidence. Tests: exact command output (not "tests pass"). AC: mapping AC → file/line. Assumptions: list every unverified hypothesis. No proof = NOT complete.</action>
 
     <!-- VALIDATION GATES -->
     <action>Verify ALL tests for this task/subtask ACTUALLY EXIST and PASS 100%</action>

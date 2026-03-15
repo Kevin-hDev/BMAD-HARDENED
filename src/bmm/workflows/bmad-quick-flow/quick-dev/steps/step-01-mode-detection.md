@@ -13,6 +13,9 @@ nextStepFile_modeB: './step-02-context-gathering.md'
 > - 📜 CRITICAL: READ AND FOLLOW `{project-root}/_bmad/bmm/data/global-agent-rules.md` — cross-workflow rules that apply at every step, even after context compaction.
 
 
+**COMPLEXITY DETECTION :** Évaluer le niveau L1-L4 de cette story (voir `{project-root}/_bmad/bmm/data/complexity-levels.md`).
+Proposer le niveau à l'utilisateur. Adapter la cérémonie en conséquence.
+
 **Goal:** Determine execution mode, capture baseline, handle escalation if needed.
 
 ---

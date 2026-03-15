@@ -3,6 +3,12 @@
 > These rules apply to ALL agents in every phase.
 > Load this file at the start of any workflow execution.
 
+## Constitution — LOAD FIRST
+
+BEFORE anything else, load `constitution.yaml` at the project root.
+It contains the non-negotiable rules (10 security reflexes, 8 structure reflexes, modes, thresholds).
+If constitution.yaml does not exist, continue with this file as the sole source of rules.
+
 ## Web Search Systematic
 
 EVERY agent MUST search the web for up-to-date information BEFORE working on a topic.
@@ -49,3 +55,55 @@ When security is relevant, agents MUST:
 
 These files are loaded ON DEMAND (not permanently in context).
 NEVER skip this step for security-relevant work.
+
+## Strict Mode Enforcement (AJOUT HARDENED)
+
+Load `{project-root}/_bmad/bmm/data/strict-modes.md` at workflow start.
+Every response MUST begin with [MODE: X].
+Valid modes: RESEARCH | PLAN | IMPLEMENT | REVIEW | SECURITY
+Mode transitions must be declared explicitly as [MODE: X → Y].
+
+## INDEX_THEN_SELECTIVE Extended (AJOUT HARDENED)
+
+This pattern applies to ALL data domains, not just security:
+1. Load the relevant index.md FIRST
+2. Match tags against current context
+3. Load ONLY the 3-5 most relevant files
+4. NEVER load all files at once
+
+Available indices:
+- security/index.md — security DATA files
+- architecture/index.md — architecture patterns
+- design/index.md — design patterns and rules
+
+## Trust-Adaptive Security Gates (AJOUT HARDENED)
+
+Load `{project-root}/_bmad/bmm/data/trust-adaptive.md` at workflow start.
+Before any security review, detect the trust level automatically:
+- Scan story content for HIGH/MEDIUM/LOW patterns (see trust-adaptive.md)
+- Apply the corresponding security review depth
+- HIGH stories in Quick Flow (L1) → escalate automatically to Full Flow
+- The `-e` flag NEVER disables security checks
+
+## ConfidenceChecker (AJOUT HARDENED)
+
+AVANT toute implémentation (dev-story ou quick-dev), l'agent DOIT :
+1. Lire `{project-root}/_bmad/bmm/data/confidence-checker.md`
+2. Exécuter le protocole de scoring (6 critères, score 0.0–1.0)
+3. Appliquer le seuil : >= 0.90 PROCEED | 0.70–0.89 CLARIFY | < 0.70 STOP
+4. Enregistrer le score dans le fichier story (Dev Agent Record)
+
+Ce protocole est un AJOUT au SelfCheck existant — il ne le remplace pas.
+Step file dédié : `{installed_path}/steps/step-02b-confidence.md`
+
+## Model Routing (AJOUT HARDENED)
+
+Au démarrage de tout workflow impliquant du code, l'agent SUGGÈRE le modèle optimal.
+Règles détaillées : `{project-root}/_bmad/bmm/data/model-routing.md`
+Règle absolue : JAMAIS Opus en sous-agent (sauf demande explicite utilisateur).
+
+## Hierarchical Loading (AJOUT HARDENED)
+
+Charger les règles progressivement : L1 constitution → L2 phase → L3 domaine.
+Ne jamais charger toutes les règles d'un coup.
+Voir `{project-root}/_bmad/bmm/data/hierarchical-loading.md`.

@@ -1,0 +1,14 @@
+# Paths configurables — BMAD-HARDENED
+# L'utilisateur peut overrider ces valeurs dans son projet en créant un fichier
+# `.bmad/paths.yaml` à la racine du projet. Les clés présentes dans ce fichier
+# local remplaceront les valeurs ci-dessous. Les clés absentes conservent
+# les valeurs par défaut définies ici.
+
+agents: "_bmad/bmm/agents"
+workflows: "_bmad/bmm/workflows"
+security_data: "_bmad/bmm/data/security"
+architecture_data: "_bmad/bmm/data/architecture"
+design_data: "_bmad/bmm/data/design"
+templates: "_bmad/bmm/templates"
+output: "_bmad-output"
+constitution: "constitution.yaml"

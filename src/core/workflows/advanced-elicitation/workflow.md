@@ -136,3 +136,41 @@ x. Proceed / No Further Actions
   1. Apply to the current enhanced version of the content
   2. Show the improvements made
   3. Return to the prompt for additional elicitations or completion
+
+---
+
+### Step 3b: SPECIAL — Red Team vs Blue Team (Method #17)
+
+When the user selects method #17 "Red Team vs Blue Team", apply this COMBAT FORMAT instead of standard execution:
+
+**DATA LOADING (6 fichiers max pour cette elicitation) :**
+1. Load `{project-root}/_bmad/bmm/data/security/index.md`
+2. The Mask (attaquant) : load 3 fichiers `atk-*` ou `the-mask/atk-exploit-*` les plus pertinents au contexte
+3. Security agent (defenseur) : load 3 fichiers `def-*` les plus pertinents au contexte
+4. Match les tags de l'index avec le code/architecture en cours de discussion
+
+**COMBAT FORMAT — 2-3 rounds (extensible si pertinent) :**
+
+```
+Round N — The Mask ATTAQUE
+"[Identifie une faille concrete dans le code/architecture en discussion]
+[Explique COMMENT il l'exploite, pas juste que c'est vulnerable]
+[Payload ou chaine d'exploitation en 3 etapes max]"
+
+Round N — Security DEFEND
+"[Repond avec une defense concrete, pas generique]
+[Code/config corrective specifique]
+[Explique pourquoi ca bloque l'attaque]"
+```
+
+**REGLES DU COMBAT :**
+- The Mask DOIT citer des techniques/CVEs reelles depuis ses DATA (pas d'inventions)
+- Security DOIT repondre avec du code/config concret (pas "il faudrait envisager...")
+- Chaque round suivant DOIT escalader : The Mask contourne la defense du round precedent
+- Le combat s'arrete quand The Mask ne peut plus contourner OU apres 3 rounds
+- A la fin : resume des failles trouvees + defenses mises en place
+
+**SORTIE DU COMBAT :**
+Liste numerotee : Faille → Defense implementee → Statut (bloquee / partiellement bloquee / necessite action humaine)
+
+Apres le combat, re-presenter le menu 1-5,r,a,x comme d'habitude.

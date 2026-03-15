@@ -81,6 +81,15 @@ Before executing ANY step below, you MUST:
 </step>
 
 <step n="2" goal="Audit PRD for security completeness">
+  <action>FIVE-PERSONA REVIEW on security-sensitive code (auth, crypto, PII, payments, API endpoints, admin):
+    Review from 5 perspectives — 3-5 findings max per persona:
+    1. Attacker: "How do I exploit this?"
+    2. Auditor: "Does this comply with standards?"
+    3. Ops: "Is this deployable and monitorable?"
+    4. Cost: "Does this impact cloud/API costs?"
+    5. User: "Is this usable and understandable?"
+    On non-sensitive code: standard review only (skip Five-Persona).</action>
+
   <action>For EACH functional requirement in the PRD, evaluate:
     1. Does it handle malicious input? (injection, overflow, traversal)
     2. Does it specify auth/authz requirements?
