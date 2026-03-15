@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "bmad-hardened",
-  "version": "6.1.4",
+  "version": "6.2.0",
   "description": "Security-hardened fork of BMad Method — Agile AI-driven Development with integrated security workflows",
   "keywords": [
     "agile",
