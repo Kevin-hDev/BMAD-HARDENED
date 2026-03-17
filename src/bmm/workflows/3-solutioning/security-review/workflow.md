@@ -78,6 +78,19 @@ Before executing ANY step below, you MUST:
     4. Any new attack techniques targeting the technologies used
   </action>
   <action>Note findings as {{latest_threats}} for use in subsequent steps</action>
+
+  <stop-check>
+    ⛔ STOP CHECK
+    - global-agent-rules.md READ (not just listed)? [YES/NO]
+    - PRD READ (not just listed)? [YES/NO]
+    - Architecture READ (not just listed)? [YES/NO]
+    - security_data/index.md READ (not just listed)? [YES/NO]
+    - Selected security DATA files READ IN FULL (not just listed or skimmed)? [YES/NO]
+    - Web search for latest CVEs completed with precise queries? [YES/NO]
+    - Ready to proceed with PRD audit? [YES/NO]
+
+    ⛔ STOP CONDITION: If any check = NO → Go back and READ the file contents before continuing. Security DATA files must be read IN FULL — skimming is not acceptable for a security audit.
+  </stop-check>
 </step>
 
 <step n="2" goal="Audit PRD for security completeness">
@@ -165,6 +178,17 @@ Before executing ANY step below, you MUST:
   </action>
 
   <action>Record findings as {{story_findings}}</action>
+
+  <stop-check>
+    ⛔ STOP CHECK
+    - {{prd_findings}} recorded from step 2? [YES/NO]
+    - {{arch_findings}} recorded from step 3? [YES/NO]
+    - {{story_findings}} recorded from step 4? [YES/NO]
+    - {{latest_threats}} still in memory from step 1? [YES/NO]
+    - Ready to generate the security review report? [YES/NO]
+
+    ⛔ STOP CONDITION: If any check = NO → Go back and re-read the relevant step outputs before generating the report.
+  </stop-check>
 </step>
 
 <step n="5" goal="Generate security review report">
